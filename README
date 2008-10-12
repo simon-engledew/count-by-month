@@ -1,13 +1,21 @@
 CountByMonth
 ============
 
-Introduction goes here.
+Adds a class method to ActiveRecord::Base that will count records by month.
 
 
 Example
 =======
 
-Example goes here.
+Post.count_by_month
+=> {Wed, 01 Oct 2008=>2, Mon, 01 Sep 2008=>1, Sun, 01 Jun 2008=>1}
+
+Post.count_by_month(:conditions => {:user_id => User.first})
+=> {Wed, 01 Oct 2008=>2, Mon, 01 Sep 2008=>1}
+
+@author.posts.count_by_month
+=> {Wed, 01 Oct 2008=>2, Mon, 01 Sep 2008=>1}
 
 
-Copyright (c) 2008 [name of plugin creator], released under the MIT license
+
+Copyright (c) 2008 Simon Engledew, released under the MIT license
